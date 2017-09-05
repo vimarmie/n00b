@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Procesos de Producción | Módulo Web</title>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:800" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:300,500" rel="stylesheet">
+<link href="estilo.css" rel="stylesheet" >
+<script>console.log("Hola. Este es un mensaje que dejé en la consola de JavaScript");</script>
+</head>
+<body>
+<div class="contenedor">
+  <h1>Procesos de Producción</h1>
+  <h2>Módulo Web</h2>
+  <p><strong>Clase 1</strong>: Martes 5 de septiembre, 2017</p>
+  <ul>
+    <li><a href="index.html">Introducción</a></li>
+    <li><a href="lenguajes.html">Lenguajes</a>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JS (Javascript)</li>
+      </ul>
+    </li>
+    <li><a href="aplicacion.html">Aplicación</a></li>
+  </ul>
+  <hr />
+<h2 id="main">Lenguajes</h2>
+<p>En este módulo, en el que contamos con 2 clases, haremos una introducción a los lenguajes habituales del <strong>Front-End</strong>. Esto les permitirá:</p>
+
+<ul>
+<li>entender aquello que se muestra al “ver código fuente”;</li>
+<li>producir prototipos funcionales de aplicaciones; y</li>
+<li>publicar su primer sitio web.</li>
+</ul>
+
+<p>Con esta introducción podrían saber "qué se puede hacer" y, si es sencillo, "cómo hacerlo". Esta será una ventaja importante al momento de decidirse por alguno de los principales roles en procesos de producción web.</p>
+
+<p>En lo que sigue, revisaremos cómo se escriben los elementos HTML, las reglas CSS y las funciones JS (JavaScript).</p>
+
+<h4>HTML</h4>
+
+<p>HTML es Lenguaje de Marcado para Hipertextos (HyperText Markup Language). <strong>Su bloque constructivo más básico es el elemento</strong>. Cada elemento de HTML se escribe, generalmente, entre etiquetas:</p>
+
+<pre><code>&lt;etiqueta&gt;<span>contenido</span>&lt;/etiqueta&gt;</code></pre>
+
+<p>Así, <strong>cada elementos HTML es un "sandwich"</strong>, con las etiquetas como rebanadas de pan, y el contido como relleno. Con estos "sadwiches" definimos qué se ve en una página web. Por ejemplo:</p>
+
+<pre><code>&lt;p&gt;<span>esto es un párrafo</span>&lt;/p&gt;</code></pre>
+
+<p><strong>Aunque también hay elementos HTML</strong> que nos obligan a cambiar la analogía del sandwich por <strong>canapé</strong>:</p>
+
+<pre><code>&lt;etiqueta&gt;</code></pre>
+
+<p>Ejemplos de estos elementos como "canapé", son:</p>
+
+<pre><code>&lt;meta&gt;</code>, <code>&lt;hr&gt;</code>, <code>&lt;br&gt;</code>, <code>&lt;img&gt;</code> </pre>
+
+<p>Si extendemos la analogía, podemos decir que cada elemento, puede estar determinado por uno o varios atributos incluídos en su primera o única rebanada de pan; y cada atributo tiene su variable.</p>
+
+<p>Como canapé:</pre>
+
+<pre><code>&lt;etiqueta atributo=&quot;variable&quot;&gt;</code></pre>
+
+<p>Como sandwich:</p>
+
+<pre><code>&lt;etiqueta atributo=&quot;variable&quot;&gt;<span>contenido</span>&lt;/etiqueta&gt;</code></pre>
+
+<p>Deben notar que atributos y variables se escriben solo en la primera etiqueta, la de apertura, nunca en la de cierre.</p>
+
+<p>Mediante atributos y variables pueden cambiar un simple párrafo a uno que tenga las características de una clase &quot;alumna&quot; y la identidad de &quot;mariana&quot;.</p>
+
+<pre><code>&lt;p class=&quot;alumna&quot; id=&quot;mariana&quot;&gt;<span>esto es un párrafo</span>&lt;/p&gt;</code></pre>
+
+<p>Estas variables, alumna y mariana, por sí mismas no significan nada, en otro lugar habría que entregarles un significado.</p>
+
+<p>Atributos y variables también nos permiten establecer vínculos y recursos. Así, por ejemplo, puedo establecer un recurso de imagen que se llama &quot;selfie&quot;, que tiene extensión &quot;jpg&quot;, e indicar que un clic en ella me "lleve" a Google:</p>
+
+<pre><code>&lt;a href=&quot;http://www.google.cl&quot;&gt;<span>&lt;img src=&quot;selfie.jpg&quot;&gt;</span>&lt;/a&gt;</code></pre>
+
+<p>En el ejemplo anterior podrán notar que hay un elemento dentro de otro elemento. Por eso que algunas personas suelen evitar la analogía del sandwich y el canapé, y prefieren usar la analogía de las matrioskas, para insistir en que describir una página web es meter elementos dentro de elementos dentro de elementos…</p>
+
+<figure>
+<img src="https://www.slavorum.org/wp-content/uploads/2014/09/7011__2.jpg">
+<figcaption>&lt;etiqueta&gt;&lt;etiqueta&gt;&lt;etiqueta&gt;…&lt;/etiqueta&gt;&lt;/etiqueta&gt;&lt;/etiqueta&gt;</figcaption>
+</figure>
+
+<h4>CSS</h4>
+
+<p>CSS es Hojas de Estilo en Cascada (Cascading Style Sheets), un lenguaje utilizado para describir la presentación de documentos HTML. <strong>Su bloque constructivo más básico es la regla CSS</strong>. Cada regla CSS se escribe así:</p>
+
+<pre><code>selector{propiedad:valor;}</code></pre>
+
+<p>Para cumplir con su función, el CSS necesita conectarse con el HTML, y hacerlo:</p>
+<ul>
+<li>a nivel de cada regla; y</li>
+<li>a nivel de conjunto de reglas.</li>
+</ul>
+
+<p><strong>Veamos primero la conexión a nivel de cada regla:</strong></p>
+
+<p>Una regla CSS puede apuntar a un elemento HTML mediante su selector. Si en el HTML queremos afectar a <code>&lt;body&gt;todo lo visible dentro de la ventana&lt;body&gt;</code>, en CSS escribimos:</p>
+
+<pre><code><span>body</span>{
+  font-family:Helvetica, Arial, sans-serif;
+}
+</code></pre>
+
+<p>Una regla CSS puede apuntar a una parte de un elemento HTML (pseudoelemento). Si en el HTML queremos afectar a la primera línea de un <code>&lt;p&gt;párrafo&lt;p&gt;</code>, en CSS escribimos:</p>
+
+<pre><code>p<span>::first-line</span>{
+  text-transform: uppercase;
+}
+</code></pre>
+
+<p>Una regla CSS puede apuntar a un estado espacial del elemento (pseudoclase). Si en el HTML queremos afectar a un <code>&lt;a&gt;vínculo&lt;a&gt;</code> mientras el mouse se posa encima, en CSS escribimos:</p>
+
+<pre><code>a<span>:hover</span>{
+  text-decoration: underline;
+}
+</code></pre>
+
+<p>Una regla CSS puede apuntar a cualquier elemento que tenga una clase (class) determinada. Así podemos afectar a un <code>&lt;p <span>class=&quot;alumna&quot;</span>&gt;párrafo&lt;/p&gt;</code>, una <code>&lt;div <span>class=&quot;alumna&quot;</span>&gt;división&lt;/div&gt;</code> o cualquier otro elemento:</p>
+
+<pre><code><span>.</span>alumna{
+  border:5px solid rgba(255,255,255,1);
+}
+</code></pre>
+
+<p>Una regla CSS puede apuntar a cualquier elemento que tenga una identidad (id) determinada. La diferencia con el caso anterior, es que se recomienda entregarle a un único elemento una identidad:</p>
+
+<pre><code><span>#</span>mariana{
+  color:rgba(255,200,200,1);
+}
+</code></pre>
+
+<p><strong>Veamos ahora la conexión a nivel de conjunto de reglas CSS.</strong></p>
+
+<p>Bien puedes agregar un poco entre las líneas de código en el cuerpo (body) del HTML, usando atributos y variables:</p>
+
+<pre><code>&lt;p <span>style=&quot;color:red;&quot;</span>&gt;esto es un párrafo&lt;/p&gt;</code></pre>
+
+<p>Mejor sería hacerlo una vez para todo el documento dentro de la cabeza (head) del documento HTML:</p>
+
+<pre><code>&lt;style&gt;
+body{
+  color:white;
+  background:black;
+  font-family:Helvetica, Arial, sans-serif;
+  font-size:1em;
+}
+
+#mariana{
+  color:rgba(255,200,200,1);
+}
+
+&lt;/style&gt;
+</code></pre>
+
+<p>Pero lo más efectivo sería trabajar en un documento CSS independiente, que se vincule con uno o varios documentos HTML</p>
+
+<pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;estilo.css&quot; type=&quot;text/css&quot;&gt;</code></pre>
+
+<figure>
+<img src="http://mujeresymas.cl/wp-content/uploads/2015/07/Qu%C3%A9-me-pongo-800x500_c.png">
+<figcaption>En analogía, CSS es una hoja de instrucciones que se pega en la puerta del closet del HTML, hoja que le indica qué debe ponerse.</figcaption>
+</figure>
+
+<h4>JS (JavaScript)</h4>
+
+<p>Javascript es un lenguaje de programación que, origintalmente, se ejecuta del <a href="https://es.wikipedia.org/wiki/Lado_del_cliente">lado del cliente</a>. Cuando <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Guide">JavaScript</a> se ejecuta, no modifica directamente el código fuente de la página web sino que el <a href="https://es.wikipedia.org/wiki/Document_Object_Model">DOM</a> de la misma; podemos seguirle la pista a esta ejecución mediante la <a href="https://transferwise.com/es/help/article/2247654/tecnico-navegador/como-abrir-la-consola-de-tu-navegador">Consola de JavaScript</a> que incluyen los navegadores.</p>
+
+<p>El código JavaScript se puede incluir en los elementos HTML, como variable de un atributo. Así, por ejemplo, puedo tener:</p>
+
+<button type="button">Un botón SIN JavaScript</button>
+
+<p>Este primer botón, sólo usa HTML:</p>
+
+<pre><code>&lt;button type="button"&gt;
+Un botón SIN JavaScript
+&lt;/button&gt;</code></pre>
+
+<p id="cambio">Pero puedo tener otro botón, que cambiará el contenido de este párrafo de <code>id="cambio"</code>, con un click, gracias a JavaScript:</p>
+
+<button type="button" onclick='document.getElementById("cambio").innerHTML = "¡Hola mundo!"'>Un botón CON JavaScript</button>
+
+<p>En este segundo botón, se agrega, como variable del atributo <code>onclick</code>, algo de JavaScript:</p>
+
+<pre><code>&lt;button type="button" <span>onclick='document.getElementById("cambio").innerHTML = "¡Hola mundo!"'</span>&gt;
+Un botón CON JavaScript
+&lt;/button&gt;</code></pre>
+
+<p>También se puede incluir o vincular el código JavaScript en el documento HTML, entre etiquetas <code>&lt;script&gt;&lt;/script&gt;</code>.</p>
+
+<p>Así, por ejemplo, puedo encargarle a JavaScript que me recuerde la cifra exacta de Ossandón: "<span id="cifra"></span>".</p>
+
+<p>Para esto, se escribe al terminar el párrafo anterior, después de los dos puntos y entre comillas:</p>
+
+<pre><code>&lt;span id="cifra"&gt;&lt;/span&gt;</code></pre>
+
+<p>Y se incluye en este documento HTML, lo siguiente:</p>
+
+<pre><code>&lt;script&gt;<span>
+var a = "Cuatro mil trescientos cuarenta";
+var b = "cuatro mil quinientos millones";
+var c = "cinco dólares";
+var ossandon = a + ' y ' + b + ' coma ' + c;
+document.getElementById("cifra").innerHTML = ossandon;
+</span>&lt;/script&gt;
+</code></pre>
+
+<script>
+var a = "Cuatro mil trescientos cuarenta";
+var b = "cuatro mil quinientos millones";
+var c = "cinco dólares";
+var ossandon = a + ' y ' + b + ' coma ' + c;
+document.getElementById("cifra").innerHTML = ossandon;
+</script>
+
+<p>Estos son ejemplos muy sencillos de lo que se puede lograr con este lenguaje de programación. Hacer algo mayor exige dedicarle tiempo, como a la cocina,
+  donde no es lo mismo hacer un huevo revuelto que una pavo relleno. Sin embargo, así como uno se puede comprar un pote de “Maruchan”,
+  en JavaScript uno puede usar bibliotecas (librerías) para saltarse las complicaciones de la programación.
+  Una de las bibliotecas de JavaScript más usadas por los diseñadores es <a href="http://jqueryui.com/demos/">jQuery</a>, con ella se pueden agregar a sus páginas varias interacciones, widgets, efectos y utilidades.</p>
+
+</div>
+</body>
+</html>
